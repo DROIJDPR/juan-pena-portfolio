@@ -3,6 +3,8 @@
 
 	width: 100%;
 
+	box-sizing: border-box;
+
 	display: grid;
 
 	grid-template-columns: 1fr 320px;
@@ -14,6 +16,8 @@
 	max-width: 1200px;
 
 	padding: 0 5rem;
+
+	overflow-x: hidden;
 }
 
 .hero-intro {
@@ -138,6 +142,8 @@
 .hero-stats {
 	display: flex;
 
+	justify-content: center;
+
 	gap: 2rem;
 
 	margin: 2rem 0;
@@ -208,7 +214,7 @@
 
 @media (max-width: 768px) {
 	.hero {
-		padding: 3rem 1rem;
+		padding: 2rem 1rem;
 	}
 
 	.hero-stats {
@@ -229,16 +235,16 @@
 
 	.hero-description {
 		max-width: 100%;
-		padding: 0 0.5rem;
+		padding: 0;
 	}
 
 	.hero-actions {
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
 	}
 
 	.hero-actions a, .hero-actions button {
-		width: 100%;
-		max-width: 320px;
+		width: 240px;
 	}
 }

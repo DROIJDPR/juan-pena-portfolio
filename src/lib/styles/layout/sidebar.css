@@ -179,11 +179,11 @@
 	}
 
 	.sidebar {
-		transform: translateX(-100%);
+		transform: translateX(-110%);
 
 		transition: transform 0.3s ease;
 
-		width: 260px;
+		width: min(260px, 80vw);
 
 		height: 100vh;
 
