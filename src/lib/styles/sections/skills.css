@@ -1,0 +1,51 @@
+.skills {
+	padding: 6rem 5rem;
+
+	max-width: 1200px;
+}
+
+.skills h2 {
+	font-size: clamp(2.5rem, 5vw, 4rem);
+
+	margin-bottom: 2rem;
+}
+
+.skills-grid {
+	display: flex;
+
+	flex-wrap: wrap;
+
+	gap: 1rem;
+}
+
+.skill-badge {
+	padding: 1rem 1.5rem;
+
+	border-radius: 999px;
+
+	border: 1px solid #2a2a2a;
+
+	background: rgba(255, 255, 255, 0.03);
+
+	font-weight: 600;
+
+	transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+	transform: translateY(-3px);
+
+	border-color: #666;
+}
+
+@media (max-width: 1024px) {
+	.skills {
+		padding: 6rem 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.skills {
+		padding: 4rem 1.5rem;
+	}
+}

@@ -1,0 +1,32 @@
+.button {
+	display: inline-flex;
+
+	align-items: center;
+	justify-content: center;
+
+	padding: 0.85rem 1.5rem;
+
+	border-radius: 12px;
+
+	text-decoration: none;
+
+	font-weight: 600;
+
+	transition: all 0.2s ease;
+}
+
+.button.primary {
+	background: #ffffff;
+
+	color: #000000;
+}
+
+.button.secondary {
+	border: 1px solid #333;
+
+	color: white;
+}
+
+.button:hover {
+	transform: translateY(-2px);
+}
