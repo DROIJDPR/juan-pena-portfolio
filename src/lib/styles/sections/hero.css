@@ -110,8 +110,8 @@
 
 	position: absolute;
 
-	width: 250px;
-	height: 250px;
+	width: 180px;
+	height: 180px;
 
 	border-radius: 50%;
 
@@ -187,6 +187,7 @@
 
 	.hero-content {
 		max-width: 100%;
+		align-items: center;
 	}
 
 	.hero-actions {
@@ -195,12 +196,17 @@
 
 	.hero-visual {
 		order: -1;
+		justify-content: center;
+	}
+
+	.hero-badge {
+		align-self: center;
 	}
 }
 
 @media (max-width: 768px) {
 	.hero {
-		padding: 3rem 1.5rem;
+		padding: 3rem 1rem;
 	}
 
 	.hero-stats {
