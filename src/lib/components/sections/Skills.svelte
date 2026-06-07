@@ -1,31 +1,71 @@
 <script lang="ts">
 	import '$lib/styles/sections/skills.css';
 	import { fade } from 'svelte/transition';
+	import { writable } from 'svelte/store';
 
+	const visible = writable(false);
+
+	function observeVisibility(node: HTMLElement) {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					visible.set(true);
+				}
+			},
+			{
+				threshold: 0.3
+			}
+		);
+
+		observer.observe(node);
+
+		return {
+			destroy() {
+				observer.disconnect();
+			}
+		};
+	}
 	const skills = [
-		'SvelteKit',
-		'TypeScript',
-		'JavaScript',
-		'HTML5',
-		'CSS3',
-		'Git',
-		'GitHub',
-		'Vercel',
-		'Responsive Design',
-		'UI / UX'
-	];
+	{ name: 'SvelteKit', level: 80 },
+	{ name: 'TypeScript', level: 75 },
+	{ name: 'JavaScript', level: 80 },
+	{ name: 'HTML5', level: 85 },
+	{ name: 'CSS3', level: 85 },
+	{ name: 'Git', level: 70 },
+	{ name: 'GitHub', level: 75 },
+	{ name: 'Vercel', level: 70 }
+];
 </script>
 
-<section id="skills" class="skills" in:fade={{ duration: 600 }}>
+<section
+	id="skills"
+	class="skills"
+	use:observeVisibility
+	in:fade={{ duration: 600 }}
+>
 	<p class="section-label">Skills</p>
 
-	<h2>Technologies & Tools</h2>
+	<h2>Technical Skills</h2>
 
-	<div class="skills-grid">
-		{#each skills as skill (skill)}
-			<div class="skill-badge">
-				{skill}
+	<p class="skills-subtitle">
+		Technologies and tools I've been using throughout my projects and coursework.
+	</p>
+
+	<div class="skills-list">
+	{#each skills as skill (skill.name)}
+		<div class="skill">
+			<div class="skill-header">
+				<span>{skill.name}</span>
+				<span>{skill.level}%</span>
 			</div>
-		{/each}
-	</div>
+
+			<div class="skill-bar">
+				<div
+				class="skill-progress"
+				style={`width: ${$visible ? skill.level : 0}%`}
+			></div>
+			</div>
+		</div>
+	{/each}
+</div>
 </section>
