@@ -1,15 +1,14 @@
 <script lang="ts">
 	import '$lib/styles/sections/skills.css';
 	import { fade } from 'svelte/transition';
-	import { writable } from 'svelte/store';
-
-	const visible = writable(false);
+	
+	let visible = $state(false);
 
 	function observeVisibility(node: HTMLElement) {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					visible.set(true);
+					visible = true;
 				}
 			},
 			{
@@ -62,7 +61,7 @@
 			<div class="skill-bar">
 				<div
 				class="skill-progress"
-				style={`width: ${$visible ? skill.level : 0}%`}
+				style={`width: ${visible ? skill.level : 0}%`}
 			></div>
 			</div>
 		</div>
