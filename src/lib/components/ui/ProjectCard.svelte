@@ -7,9 +7,10 @@
 		demo?: string;
 		image?: string;
 		technologies?: string[];
+		year?: string;
 	}
 
-	let { title, description, status, github, demo, technologies = [], image }: Props = $props();
+	let { title, description, status, github, demo, technologies = [], image, year }: Props = $props();
 </script>
 
 <div class="project-card">
@@ -23,6 +24,12 @@
 	<span class="status">
 		{status}
 	</span>
+
+	{#if year}
+	<span class="project-year">
+		{year}
+	</span>
+	{/if}
 
 	<h3>
 		{title}

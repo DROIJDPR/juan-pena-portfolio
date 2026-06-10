@@ -184,6 +184,20 @@
 	font-weight: 600;
 }
 
+.hero-details {
+	display: flex;
+
+	flex-wrap: wrap;
+
+	gap: 1rem;
+
+	margin-top: 1.5rem;
+
+	color: var(--muted);
+
+	font-size: 0.95rem;
+}
+
 @media (max-width: 1024px) {
 	.hero {
 		grid-template-columns: 1fr;
@@ -252,6 +266,11 @@
 	}
 
 	.hero-content {
+		gap: 0.5rem;
+	}
+
+	.hero-details {
+		flex-direction: column;
 		gap: 0.5rem;
 	}
 }

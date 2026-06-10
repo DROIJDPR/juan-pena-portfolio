@@ -19,6 +19,12 @@
 			web applications using SvelteKit, TypeScript and modern development practices.
 		</p>
 
+		<div class="hero-details">
+	<span>📍 Puerto Rico</span>
+	<span>🎓 Universidad del Sagrado Corazón</span>
+	<span>💻 Focused on Web Development</span>
+</div>
+
 		<div class="hero-stats">
 			<div class="stat">
 				<span class="stat-number">3+</span>
@@ -37,10 +43,19 @@
 		</div>
 
 		<div class="hero-actions">
-			<Button label="View Projects" href="#projects" />
+	<Button label="View Projects" href="#projects" />
 
-			<Button label="Contact Me" href="#contact" variant="secondary" />
-		</div>
+	<Button label="Contact Me" href="#contact" variant="secondary" />
+		<a
+			href="/JuanPenaResume2026.pdf"
+			data-sveltekit-reload
+			target="_blank"
+			rel="noopener noreferrer"
+			class="button secondary"
+		>
+			📄 Resume
+		</a>
+</div>
 	</div>
 
 	<div class="hero-visual">

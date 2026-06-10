@@ -6,6 +6,7 @@
 	const projects = [
 		{
 			title: 'AI Flow Dashboard',
+			year: '2026',
 			description:
 				'Responsive admin dashboard featuring analytics, user management, settings and a modern UI built with SvelteKit and TypeScript.',
 			status: 'Live',
@@ -17,10 +18,13 @@
 		{
 			title: 'Atrapa-Esfera',
 			description: 'Arcade game project developed as a learning experience.',
-			status: 'Completed'
+			status: 'Completed',
+			technologies: ['React', 'TypeScript', 'CSS'],
+			github: ''
 		},
 		{
 			title: 'Portfolio Website',
+			year: '2025',
 			description: 'Responsive portfolio built with Svelte 5, TypeScript and deployed on Vercel.',
 			status: 'Live',
 			technologies: ['Svelte 5', 'TypeScript', 'CSS', 'Vercel'],
@@ -40,6 +44,7 @@
 		{#each projects as project (project.title)}
 			<ProjectCard
 				title={project.title}
+				year={project.year}
 				description={project.description}
 				status={project.status}
 				technologies={project.technologies}
