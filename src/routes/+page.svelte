@@ -26,11 +26,14 @@
 <style>
 	.content {
 		margin-left: 220px;
+		width: calc(100% - 220px);
+		box-sizing: border-box;
 	}
 
 	@media (max-width: 1024px) {
 		.content {
 			margin-left: 0;
+			width: 100%;
 		}
 	}
 </style>

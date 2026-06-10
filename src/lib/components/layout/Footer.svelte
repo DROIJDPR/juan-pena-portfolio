@@ -7,7 +7,7 @@
 <style>
 	.footer {
 		padding: 3rem 2rem;
-
+		
 		border-top: 1px solid #222;
 
 		display: flex;
