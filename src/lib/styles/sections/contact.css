@@ -13,7 +13,7 @@
 .contact-description {
 	max-width: 600px;
 
-	color: #d1d5db;
+	color: var(--muted);
 
 	line-height: 1.8;
 
@@ -31,13 +31,15 @@
 .contact-links a {
 	padding: 1rem 1.5rem;
 
-	border: 1px solid #2a2a2a;
+	border: 1px solid var(--border);
+
+	background: var(--surface-2);
 
 	border-radius: 12px;
 
 	text-decoration: none;
 
-	color: white;
+	color: var(--text);
 
 	transition: all 0.2s ease;
 }
@@ -45,7 +47,7 @@
 .contact-links a:hover {
 	transform: translateY(-3px);
 
-	border-color: #666;
+	border-color: var(--border-hover);
 }
 
 .contact-links a {

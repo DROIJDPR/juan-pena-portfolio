@@ -7,8 +7,8 @@
 <style>
 	.footer {
 		padding: 3rem 2rem;
-		
-		border-top: 1px solid #222;
+
+		border-top: 1px solid var(--border);
 
 		display: flex;
 
@@ -18,6 +18,8 @@
 
 		gap: 1rem;
 
-		color: #9ca3af;
+		color: var(--muted);
+
+		background: var(--surface);
 	}
 </style>

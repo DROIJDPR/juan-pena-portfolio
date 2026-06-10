@@ -6,6 +6,25 @@
 
 	let activeSection = $state('home');
 
+	let theme = $state('dark');
+
+	$effect(() => {
+		const savedTheme = localStorage.getItem('theme');
+
+		if (savedTheme === 'light') {
+			theme = 'light';
+			document.documentElement.setAttribute('data-theme', 'light');
+		}
+	});
+
+	function toggleTheme() {
+		theme = theme === 'dark' ? 'light' : 'dark';
+
+		document.documentElement.setAttribute('data-theme', theme);
+
+		localStorage.setItem('theme', theme);
+	}
+
 	$effect(() => {
 		const sections = document.querySelectorAll('section');
 
@@ -58,6 +77,10 @@
 		>
 			GitHub →
 		</a>
+
+		<button class="theme-toggle" onclick={toggleTheme}>
+			{theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
+		</button>
 	</div>
 
 	<nav>

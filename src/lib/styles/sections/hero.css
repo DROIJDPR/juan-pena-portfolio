@@ -246,7 +246,8 @@
 		width: 100%;
 	}
 
-	.hero-actions a, .hero-actions button {
+	.hero-actions a,
+	.hero-actions button {
 		width: 220px;
 	}
 

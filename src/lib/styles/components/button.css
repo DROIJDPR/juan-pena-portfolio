@@ -16,15 +16,17 @@
 }
 
 .button.primary {
-	background: #ffffff;
+	background: var(--text);
 
-	color: #000000;
+	color: var(--bg);
 }
 
 .button.secondary {
-	border: 1px solid #333;
+	border: 1px solid var(--border);
 
-	color: white;
+	color: var(--text);
+
+	background: var(--surface);
 }
 
 .button:hover {

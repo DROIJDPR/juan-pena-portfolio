@@ -14,9 +14,9 @@
 
 	gap: 3rem;
 
-	border-right: 1px solid #222;
+	border-right: 1px solid var(--border);
 
-	background: #0a0a0a;
+	background: var(--surface);
 	z-index: 100;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .sidebar a {
-	color: #9ca3af;
+	color: var(--muted);
 
 	text-decoration: none;
 
@@ -44,7 +44,7 @@
 }
 
 .sidebar a:hover {
-	color: white;
+	color: var(--text);
 
 	transform: translateX(4px);
 }
@@ -62,7 +62,7 @@
 		padding: 1rem 2rem;
 
 		border-right: none;
-		border-bottom: 1px solid #222;
+		border-bottom: 1px solid var(--border);
 	}
 
 	.sidebar nav {
@@ -93,7 +93,7 @@
 
 	background: rgba(255, 255, 255, 0.05);
 
-	border: 1px solid #2a2a2a;
+	border: 1px solid var(--border);
 
 	margin-bottom: 1rem;
 }
@@ -113,7 +113,7 @@
 .sidebar-profile p {
 	margin-top: 0.5rem;
 
-	color: #9ca3af;
+	color: var(--muted);
 
 	font-size: 0.85rem;
 }
@@ -128,11 +128,11 @@
 
 	z-index: 110;
 
-	background: #111;
+	background: var(--surface-2);
 
-	color: white;
+	color: var(--text);
 
-	border: 1px solid #333;
+	border: 1px solid var(--border-hover);
 
 	border-radius: 10px;
 
@@ -142,7 +142,7 @@
 }
 
 .sidebar a.active {
-	color: white;
+	color: var(--text);
 
 	font-weight: 700;
 }
@@ -152,7 +152,7 @@
 
 	margin-right: 0.5rem;
 
-	color: #3b82f6;
+	color: var(--accent);
 }
 
 .sidebar-github {
@@ -171,6 +171,48 @@
 
 .sidebar-github:hover {
 	opacity: 0.8;
+}
+
+.menu-toggle.hidden {
+	display: none;
+}
+
+.sidebar-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(4px);
+	z-index: 90;
+	border: none;
+	padding: 0;
+}
+
+.theme-toggle {
+	width: 100%;
+
+	margin-top: 1rem;
+
+	padding: 0.75rem 1rem;
+
+	background: var(--surface-2);
+
+	color: var(--text);
+
+	border: 1px solid var(--border);
+
+	border-radius: 12px;
+
+	cursor: pointer;
+
+	font-size: 0.9rem;
+
+	transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+	border-color: var(--accent);
+
+	transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -192,7 +234,7 @@
 		left: 0;
 		top: 0;
 
-		background: #050505;
+		background: var(--surface);
 	}
 
 	.sidebar.open {
@@ -212,18 +254,4 @@
 	.sidebar nav {
 		gap: 0.75rem;
 	}
-}
-
-.menu-toggle.hidden {
-	display: none;
-}
-
-.sidebar-overlay {
-	position: fixed;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(4px);
-	z-index: 90;
-	border: none;
-	padding: 0;
 }

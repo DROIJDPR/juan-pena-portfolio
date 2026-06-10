@@ -9,7 +9,7 @@
 }
 
 .section-label {
-	color: #9ca3af;
+	color: var(--muted);
 
 	text-transform: uppercase;
 
@@ -37,7 +37,7 @@
 
 	line-height: 1.8;
 
-	color: #d1d5db;
+	color: var(--muted);
 }
 
 .about-cards {
@@ -51,11 +51,11 @@
 .about-card {
 	padding: 2rem;
 
-	border: 1px solid #222;
+	border: 1px solid var(--border);
 
 	border-radius: 20px;
 
-	background: rgba(255, 255, 255, 0.02);
+	background: var(--surface-2);
 }
 
 .about-card h3 {

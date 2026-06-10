@@ -21,11 +21,11 @@
 .project-card {
 	padding: 2rem;
 
-	border: 1px solid #222;
+	border: 1px solid var(--border);
 
 	border-radius: 20px;
 
-	background: rgba(255, 255, 255, 0.02);
+	background: var(--surface-2);
 
 	overflow: hidden;
 
@@ -35,7 +35,7 @@
 .project-card:hover {
 	transform: translateY(-6px);
 
-	border-color: #3b82f6;
+	border-color: var(--accent);
 
 	box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
 }
@@ -47,7 +47,7 @@
 
 	font-size: 0.85rem;
 
-	color: #9ca3af;
+	color: var(--muted);
 }
 
 .tech-list {
@@ -65,7 +65,7 @@
 
 	border-radius: 999px;
 
-	background: rgba(255, 255, 255, 0.05);
+	background: var(--surface);
 
 	font-size: 0.8rem;
 }
@@ -79,7 +79,7 @@
 }
 
 .project-links a {
-	color: white;
+	color: var(--text);
 
 	text-decoration: none;
 
@@ -102,9 +102,9 @@
 	align-items: center;
 	justify-content: center;
 
-	background: linear-gradient(135deg, #111827, #1f2937);
+	background: linear-gradient(135deg, var(--surface), var(--surface-2));
 
-	color: #9ca3af;
+	color: var(--muted);
 
 	font-weight: 600;
 
