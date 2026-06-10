@@ -51,7 +51,12 @@
 
 		z-index: 1000;
 
-		transition: all 0.2s ease;
+		transition:
+
+		transform 0.2s ease,
+		background-color 0.35s ease,
+		border-color 0.35s ease,
+		color 0.35s ease;
 	}
 
 	.floating-theme-toggle:hover {
