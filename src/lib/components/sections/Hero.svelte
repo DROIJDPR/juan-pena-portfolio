@@ -48,7 +48,6 @@
 	<Button label="Contact Me" href="#contact" variant="secondary" />
 		<a
 			href="/JuanPenaResume2026.pdf"
-			data-sveltekit-reload
 			target="_blank"
 			rel="noopener noreferrer"
 			class="button secondary"
