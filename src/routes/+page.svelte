@@ -8,9 +8,11 @@
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import BackToTop from '$lib/components/ui/BackToTop.svelte';
 	import Journey from '$lib/components/sections/Journey.svelte';
+	import ThemeToggle from '$lib/components/ui/ThemeToggle.svelte';
 </script>
 
 <Sidebar />
+<ThemeToggle />
 
 <main class="content">
 	<Hero />
