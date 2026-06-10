@@ -61,13 +61,17 @@
 }
 
 .tech {
-	padding: 0.35rem 0.75rem;
+	padding: 0.4rem 0.8rem;
 
 	border-radius: 999px;
 
 	background: var(--surface);
 
+	border: 1px solid var(--border);
+
 	font-size: 0.8rem;
+
+	font-weight: 600;
 }
 
 .project-links {
@@ -102,6 +106,8 @@
 	align-items: center;
 	justify-content: center;
 
+	overflow: hidden;
+
 	background: linear-gradient(135deg, var(--surface), var(--surface-2));
 
 	color: var(--muted);
@@ -120,6 +126,8 @@
 	height: 100%;
 
 	object-fit: cover;
+
+	transition: transform 0.35s ease;
 
 	display: block;
 

@@ -21,8 +21,12 @@
 		},
 		{
 			title: 'Portfolio Website',
-			description: 'Personal portfolio built with Svelte 5 and TypeScript.',
-			status: 'In Progress'
+			description: 'Responsive portfolio built with Svelte 5, TypeScript and deployed on Vercel.',
+			status: 'Live',
+			technologies: ['Svelte 5', 'TypeScript', 'CSS', 'Vercel'],
+			github: 'https://github.com/DROIJDPR/juan-pena-portfolio',
+			demo: 'https://juan-pena-portfolio.vercel.app',
+			image: 'images/portfolio.png'
 		}
 	];
 </script>
