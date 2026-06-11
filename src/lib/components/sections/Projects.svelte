@@ -43,18 +43,23 @@
 	<h2>Featured Projects</h2>
 
 	<div class="projects-grid">
-		{#each projects as project (project.title)}
-			<ProjectCard
-				title={project.title}
-				year={project.year}
-				description={project.description}
-				status={project.status}
-				technologies={project.technologies}
-				github={project.github}
-				demo={project.demo}
-				image={project.image}
-			/>
-		{/each}
+		{#each projects as project, index (project.title)}
+	<div
+		class="project-wrapper"
+		style={`animation-delay: ${index * 150}ms`}
+	>
+		<ProjectCard
+			title={project.title}
+			year={project.year}
+			description={project.description}
+			status={project.status}
+			technologies={project.technologies}
+			github={project.github}
+			demo={project.demo}
+			image={project.image}
+		/>
+	</div>
+{/each}
 	</div>
 </section>
 </Reveal>
