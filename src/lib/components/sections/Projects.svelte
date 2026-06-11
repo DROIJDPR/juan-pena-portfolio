@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/styles/sections/projects.css';
 	import ProjectCard from '$lib/components/ui/ProjectCard.svelte';
-	import { fly } from 'svelte/transition';
+	import Reveal from '$lib/components/ui/Reveal.svelte';
 
 	const projects = [
 		{
@@ -36,7 +36,8 @@
 	];
 </script>
 
-<section id="projects" class="projects" in:fly={{ duration: 700 }}>
+<Reveal>
+<section id="projects" class="projects">
 	<p class="section-label">Projects</p>
 
 	<h2>Featured Projects</h2>
@@ -56,3 +57,4 @@
 		{/each}
 	</div>
 </section>
+</Reveal>

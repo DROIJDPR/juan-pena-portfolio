@@ -1,9 +1,10 @@
 <script lang="ts">
 	import '$lib/styles/sections/about.css';
-	import { fly } from 'svelte/transition';
+	import Reveal from '$lib/components/ui/Reveal.svelte';
 </script>
 
-<section id="about" class="about" in:fly={{ y: 30, duration: 700}}>
+<Reveal>
+<section id="about" class="about">
 	<div class="about-header">
 		<p class="section-label">About</p>
 
@@ -37,3 +38,4 @@
 		</div>
 	</div>
 </section>
+</Reveal>

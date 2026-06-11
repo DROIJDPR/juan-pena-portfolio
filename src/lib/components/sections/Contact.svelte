@@ -3,10 +3,11 @@
 	import { Mail } from '@lucide/svelte/icons';
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
-	import { fly } from 'svelte/transition';
+	import Reveal from '$lib/components/ui/Reveal.svelte';
 </script>
 
-<section id="contact" class="contact" in:fly={{ duration: 700 }}>
+<Reveal>
+<section id="contact" class="contact">
 	<p class="section-label">Contact</p>
 
 	<h2>Let's Work Together</h2>
@@ -32,3 +33,4 @@
 		</a>
 	</div>
 </section>
+</Reveal>
