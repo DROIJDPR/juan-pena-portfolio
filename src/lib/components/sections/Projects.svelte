@@ -8,7 +8,7 @@
 			title: 'AI Flow Dashboard',
 			year: '2026',
 			description:
-				'Responsive admin dashboard featuring analytics, user management, settings and a modern UI built with SvelteKit and TypeScript.',
+				'Interactive arcade game developed with React and TypeScript featuring score tracking, collision detection and responsive gameplay.',
 			status: 'Live',
 			technologies: ['SvelteKit', 'TypeScript', 'CSS', 'Vercel'],
 			image: 'images/dashboard.png',
@@ -17,7 +17,7 @@
 		},
 		{
 			title: 'Atrapa-Esfera',
-			year: '',
+			year: '2025',
 			description: 'Arcade game project developed as a learning experience.',
 			status: 'Completed',
 			technologies: ['React', 'TypeScript', 'CSS'],
