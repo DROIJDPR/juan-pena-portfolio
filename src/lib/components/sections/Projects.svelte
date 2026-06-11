@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/styles/sections/projects.css';
 	import ProjectCard from '$lib/components/ui/ProjectCard.svelte';
-	import { fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	const projects = [
 		{
@@ -17,6 +17,7 @@
 		},
 		{
 			title: 'Atrapa-Esfera',
+			year: '',
 			description: 'Arcade game project developed as a learning experience.',
 			status: 'Completed',
 			technologies: ['React', 'TypeScript', 'CSS'],
@@ -35,7 +36,7 @@
 	];
 </script>
 
-<section id="projects" class="projects" in:fade={{ duration: 600 }}>
+<section id="projects" class="projects" in:fly={{ duration: 700 }}>
 	<p class="section-label">Projects</p>
 
 	<h2>Featured Projects</h2>

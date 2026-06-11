@@ -1,9 +1,9 @@
 <script lang="ts">
 	import '$lib/styles/sections/about.css';
-	import { fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 </script>
 
-<section id="about" class="about" in:fade={{ duration: 600 }}>
+<section id="about" class="about" in:fly={{ y: 30, duration: 700}}>
 	<div class="about-header">
 		<p class="section-label">About</p>
 

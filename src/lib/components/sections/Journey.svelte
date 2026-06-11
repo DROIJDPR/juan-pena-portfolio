@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '$lib/styles/sections/journey.css';
+	import { fly } from 'svelte/transition'
 
 	const milestones = [
 		{
@@ -25,7 +26,7 @@
 	];
 </script>
 
-<section id="journey" class="journey">
+<section id="journey" class="journey" in:fly={{ y: 30, duration: 700}}>
 	<p class="section-label">Journey</p>
 
 	<h2>Education & Growth</h2>

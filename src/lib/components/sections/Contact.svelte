@@ -3,10 +3,10 @@
 	import { Mail } from '@lucide/svelte/icons';
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
-	import { fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 </script>
 
-<section id="contact" class="contact" in:fade={{ duration: 600 }}>
+<section id="contact" class="contact" in:fly={{ duration: 700 }}>
 	<p class="section-label">Contact</p>
 
 	<h2>Let's Work Together</h2>
