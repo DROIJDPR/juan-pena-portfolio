@@ -1,4 +1,7 @@
 <script lang="ts">
+
+	let rotating = $state(false);
+
 	let theme = $state('dark');
 
 	$effect(() => {
@@ -16,11 +19,16 @@
 		document.documentElement.setAttribute('data-theme', theme);
 
 		localStorage.setItem('theme', theme);
+
+		setTimeout(() => {
+			rotating = false;
+		}, 400);
 	}
 </script>
 
 <button
 	class="floating-theme-toggle"
+	class:theme-rotate={rotating}
 	onclick={toggleTheme}
 	aria-label="Toggle theme"
 >
@@ -29,6 +37,8 @@
 
 <style>
 	.floating-theme-toggle {
+		transform-origin: center;
+
 		position: fixed;
 
 		top: 1.5rem;
@@ -64,6 +74,20 @@
 
 		border-color: var(--accent);
 	}
+
+	.theme-rotate {
+	animation: themeSpin 0.4s ease;
+}
+
+@keyframes themeSpin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(180deg);
+	}
+}
 
 	@media (max-width: 1024px) {
 		.floating-theme-toggle {
