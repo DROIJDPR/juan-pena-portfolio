@@ -30,7 +30,7 @@
 
 <button
 	class="floating-theme-toggle"
-	class:theme-rotate={rotating}
+	class:theme-pop={rotating}
 	onclick={toggleTheme}
 	aria-label="Toggle theme"
 >
@@ -77,17 +77,21 @@
 		border-color: var(--accent);
 	}
 
-	.theme-rotate {
-	animation: themeSpin 0.4s ease;
+.theme-pop {
+	animation: themePop 0.25s ease;
 }
 
-@keyframes themeSpin {
-	from {
-		transform: rotate(0deg);
+@keyframes themePop {
+	0% {
+		transform: scale(0.8);
 	}
 
-	to {
-		transform: rotate(180deg);
+	50% {
+		transform: scale(1.15);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }
 
