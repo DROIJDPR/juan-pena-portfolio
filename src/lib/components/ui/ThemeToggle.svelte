@@ -14,6 +14,8 @@
 	});
 
 	function toggleTheme() {
+		rotating = true;
+		
 		theme = theme === 'dark' ? 'light' : 'dark';
 
 		document.documentElement.setAttribute('data-theme', theme);
