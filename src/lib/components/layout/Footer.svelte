@@ -1,5 +1,5 @@
 <footer class="footer">
-	<p>© 2026 Juan Peña</p>
+	<p>© 2026 Juan Peña • Portfolio v1.0.0</p>
 
 	<p>Built with SvelteKit 5, TypeScript and Vercel</p>
 </footer>
